@@ -12,6 +12,7 @@ def reformat_languages(languages)
     if (languages.values[0].keys & languages.values[1].keys).include?(lan)
       sty[:style] = [:oo, :functional]
     elsif languages.values[0].keys.include?(lan) && !languages.values[1].keys.include?(lan)
+
     if languages.values[0].keys & languages.values[1].keys.include(lan)
       sty[:style] = [:oo, :functional]
     elsif languages.values[0].keys.include(lan) && !languages.values[1].keys.include(lan)
@@ -20,6 +21,7 @@ def reformat_languages(languages)
       sty[:style] = [:functional]
     end
   end
+  return hash
 end
   # hash.each do |l2, t2|
   #   t2[:style] = arr
